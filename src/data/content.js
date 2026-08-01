@@ -106,11 +106,56 @@ export const promises = [
   "Always make you feel loved.",
 ];
 
-export const galleryPlaceholders = [
-  { name: "photo1", caption: "Kilimanjaro, the night you wouldn't look at me." },
-  { name: "photo2", caption: "Pleasure Park, right before I made my prediction." },
-  { name: "photo3", caption: "One of my favorite ordinary days." },
-  { name: "photo4", caption: "Youuuuuuu." },
-  { name: "photo5", caption: "Us, somewhere in between everything else." },
-  // { name: "photo6", caption: "A day I never wanted to end." },
+// Chapter Two, one combined list of photos and videos, shown in this exact
+// order. Add, remove, or reorder items freely, this array is the only thing
+// that controls what appears and in what order.
+//
+// Each item needs:
+//   type    "photo" or "video"
+//   name    base filename in public/images (photos) or public/videos
+//           (videos), no extension. The site tries common extensions and
+//           cases automatically, see the README in each folder.
+//   caption whatever you want written under it
+//
+// Videos can also take:
+//   poster  base filename of a thumbnail image in public/images, no
+//           extension, totally optional. Leave it out (or set to null) and
+//           the card just shows a plain dark frame with a play icon
+//           instead, which looks fine too.
+//
+// The captions on the video entries below are placeholders in the same
+// voice as the photo captions, written so the page looks and reads right
+// immediately. Swap in your own labels whenever you're ready, nothing else
+// needs to change.
+export const galleryItems = [
+  { type: "photo", name: "photo1", caption: "Kilimanjaro, the night you wouldn't look at me." },
+  {
+    type: "video",
+    name: "video1",
+    poster: null,
+    caption: "Kilimanjaro again, this time with sound. Replace this with the clip you actually want here.",
+  },
+  { type: "photo", name: "photo2", caption: "Pleasure Park, right before I made my prediction." },
+  {
+    type: "video",
+    name: "video2",
+    poster: null,
+    caption: "A few seconds of Pleasure Park, just so I can hear us laughing again whenever I want.",
+  },
+  { type: "photo", name: "photo3", caption: "One of my favorite ordinary days." },
+  { type: "photo", name: "photo4", caption: "Youuuuuuu." },
+  {
+    type: "video",
+    name: "video3",
+    poster: null,
+    caption: "The cinema, in motion this time. This one's yours to swap for whatever you'd rather I keep.",
+  },
+  { type: "photo", name: "photo5", caption: "Us, somewhere in between everything else." },
+  {
+    type: "video",
+    name: "video4",
+    poster: null,
+    caption: "One more memory that moves. Rename this slot or add a fifth, however many you want in here.",
+  },
+  // { type: "photo", name: "photo6", caption: "A day I never wanted to end." },
 ];

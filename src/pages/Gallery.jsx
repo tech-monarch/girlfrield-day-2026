@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Atmosphere from "../components/Atmosphere.jsx";
 import SmartImage from "../components/SmartImage.jsx";
-import { galleryPlaceholders } from "../data/content.js";
+import SmartVideo from "../components/SmartVideo.jsx";
+import { galleryItems } from "../data/content.js";
 
 export default function Gallery() {
   const [active, setActive] = useState(null);
@@ -18,35 +19,70 @@ export default function Gallery() {
         <h2 className="font-display text-4xl sm:text-6xl text-center mb-4 text-plum text-balance">
           Moments I'll Never Forget
         </h2>
-        <p className="text-center text-mauve mb-28">Tap a photograph to step back into it. 📸</p>
+        <p className="text-center text-mauve mb-28">
+          Tap a photograph to step back into it, the clips play as you scroll, sound off until you tap the speaker. 📸
+        </p>
 
         <div className="space-y-24 sm:space-y-32">
-          {galleryPlaceholders.map((photo, i) => (
-            <motion.button
-              key={photo.name}
-              initial={{ opacity: 0, y: 30, rotate: i % 2 === 0 ? -1.5 : 1.5 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              onClick={() => setActive(photo)}
-              className="block w-full text-left group"
-            >
-              <div className="rounded-card overflow-hidden bg-white border-4 border-white shadow-soft aspect-[4/3] sm:aspect-[16/10]">
-                <SmartImage
-                  folder="/images"
-                  name={photo.name}
-                  alt={photo.caption}
-                  className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-cinematic"
-                />
-              </div>
-              <div className="flex items-center gap-3 mt-6">
-                <span className="text-[11px] tracking-widest2 uppercase text-accent-lavender font-semibold">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <p className="text-mauve">{photo.caption}</p>
-              </div>
-            </motion.button>
-          ))}
+          {galleryItems.map((item, i) => {
+            const label = String(i + 1).padStart(2, "0");
+            const rotate = i % 2 === 0 ? -1.5 : 1.5;
+
+            if (item.type === "video") {
+              return (
+                <motion.div
+                  key={`video-${item.name}`}
+                  initial={{ opacity: 0, y: 30, rotate }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                  className="block w-full"
+                >
+                  <div className="rounded-card overflow-hidden bg-plum border-4 border-white shadow-soft aspect-[4/3] sm:aspect-[16/10]">
+                    <SmartVideo
+                      folder="/videos"
+                      name={item.name}
+                      posterName={item.poster}
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <div className="flex items-center gap-3 mt-6">
+                    <span className="text-[11px] tracking-widest2 uppercase text-accent-lavender font-semibold">
+                      {label}
+                    </span>
+                    <p className="text-mauve">{item.caption}</p>
+                  </div>
+                </motion.div>
+              );
+            }
+
+            return (
+              <motion.button
+                key={`photo-${item.name}`}
+                initial={{ opacity: 0, y: 30, rotate }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                onClick={() => setActive(item)}
+                className="block w-full text-left group"
+              >
+                <div className="rounded-card overflow-hidden bg-white border-4 border-white shadow-soft aspect-[4/3] sm:aspect-[16/10]">
+                  <SmartImage
+                    folder="/images"
+                    name={item.name}
+                    alt={item.caption}
+                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-cinematic"
+                  />
+                </div>
+                <div className="flex items-center gap-3 mt-6">
+                  <span className="text-[11px] tracking-widest2 uppercase text-accent-lavender font-semibold">
+                    {label}
+                  </span>
+                  <p className="text-mauve">{item.caption}</p>
+                </div>
+              </motion.button>
+            );
+          })}
         </div>
       </div>
 

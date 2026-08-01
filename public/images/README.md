@@ -11,6 +11,19 @@ already looks for them, so nothing else needs to change once they're here.
 - `photo5`, any photo of the two of you.
 - `photo6`, a day you never wanted to end.
 
+Photos and videos now appear together in Chapter Two, the Gallery, as one
+combined list defined by `galleryItems` in `src/data/content.js`. Add,
+remove, or reorder entries there to change what shows and in what order, see
+`public/videos/README.md` for how the video side of that same list works.
+
+## Optional video posters
+
+Any photo in this folder can also double as a poster (thumbnail) for a video
+card. Just point a video entry's `poster` field in `galleryItems` at a base
+name here, same extension and case tolerance applies. No poster set, or the
+file is missing, the video card just falls back to a plain dark frame with a
+play icon, never a broken image.
+
 The extension and its case do not matter. `hero-couple.jpg`, `hero-couple.JPG`,
 and `hero-couple.jpeg` all work, since the site tries the common variants
 automatically until one loads. Just make sure the base name before the dot

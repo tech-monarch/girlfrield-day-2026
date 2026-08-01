@@ -8,6 +8,13 @@ export const PLAYLIST = [
   { id: "photograph", title: "Photograph", artist: "Ed Sheeran", file: "/music/photograph.mp3", artName: "album-photograph" },
   { id: "lost-stars", title: "Lost Stars", artist: "Adam Levine", file: "/music/lost-stars.mp3", artName: "album-lost-stars" },
   { id: "shivers", title: "Shivers", artist: "Ed Sheeran", file: "/music/shivers.mp3", artName: "album-shivers" },
+  {
+    id: "gone-gone-gone",
+    title: "Gone, Gone, Gone",
+    artist: "Phillip Phillips",
+    file: "/music/gone-gone-gone.mp3",
+    artName: "album-gone-gone-gone",
+  },
 ];
 
 // "off" -> play through once and stop looping the queue

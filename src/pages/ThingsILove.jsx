@@ -15,12 +15,8 @@ function shuffled(arr) {
 export default function ThingsILove() {
   const [order] = useState(() => shuffled(reasons));
   const [index, setIndex] = useState(0);
-  const [hasClicked, setHasClicked] = useState(false);
 
-  const next = () => {
-    setHasClicked(true);
-    setIndex((i) => (i + 1) % order.length);
-  };
+  const next = () => setIndex((i) => (i + 1) % order.length);
 
   return (
     <section className="relative min-h-screen px-6 py-32 flex flex-col items-center justify-center overflow-hidden bg-cream">
@@ -46,60 +42,12 @@ export default function ThingsILove() {
           </AnimatePresence>
         </div>
 
-        <div className="relative inline-block mt-16">
-          <button
-            onClick={next}
-            className="px-7 py-3.5 rounded-full bg-white border border-accent-pink/25 text-sm font-medium text-mauve hover:text-accent-rose hover:border-accent-rose/40 shadow-subtle transition-colors"
-          >
-            Tell me another reason 🌸
-          </button>
-
-          {/* A little scribble nudge toward the button, gone for good the
-              moment she actually taps it. */}
-          <AnimatePresence>
-            {!hasClicked && (
-              <motion.div
-                initial={{ opacity: 0, y: -8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="pointer-events-none absolute -top-24 -right-6 sm:-right-16 w-28 sm:w-32"
-              >
-                <motion.div
-                  animate={{ rotate: [-3, 4, -3] }}
-                  transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <span className="font-script text-2xl text-accent-rose block text-center -rotate-6 mb-0.5">
-                    click it!
-                  </span>
-                  <svg viewBox="0 0 140 120" className="w-full h-auto text-accent-rose rotate-[6deg]" fill="none">
-                    <defs>
-                      <marker
-                        id="scribbleArrowhead"
-                        markerWidth="7"
-                        markerHeight="7"
-                        refX="3.5"
-                        refY="3.5"
-                        orient="auto-start-reverse"
-                      >
-                        <polygon points="0,0 7,3.5 0,7" fill="currentColor" />
-                      </marker>
-                    </defs>
-                    <path
-                      d="M120 10 C 95 4, 58 18, 46 46 C 36 70, 44 82, 18 102"
-                      stroke="currentColor"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeDasharray="1 8"
-                      markerEnd="url(#scribbleArrowhead)"
-                    />
-                  </svg>
-                </motion.div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-
+        <button
+          onClick={next}
+          className="mt-16 px-7 py-3.5 rounded-full bg-white border border-accent-pink/25 text-sm font-medium text-mauve hover:text-accent-rose hover:border-accent-rose/40 shadow-subtle transition-colors"
+        >
+          Tell me another reason 🌸
+        </button>
         <p className="text-[11px] text-mauve mt-4">
           {index + 1} of {order.length}
         </p>

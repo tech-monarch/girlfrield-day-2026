@@ -57,7 +57,9 @@ export default function MusicPlayer() {
   const [artFailed, setArtFailed] = useState(false);
   useResetOnChange(trackIndex, setArtFailed);
 
-  if (!hasStarted) return null;
+  // The pill is a permanent piece of the top nav, visible as soon as the
+  // site unlocks, it just shows a "tap to play" state before that first
+  // click, since browsers won't let audio start on its own.
 
   return (
     <motion.div
@@ -84,7 +86,7 @@ export default function MusicPlayer() {
           <div className="min-w-0 flex-1">
             <p className="text-[13px] font-semibold truncate text-plum">{track.title}</p>
             <p className="text-[11px] text-mauve truncate flex items-center gap-1.5">
-              {track.artist}
+              {hasStarted ? track.artist : "Tap to play our songs"}
               {trackError === track.id && (
                 <span className="inline-flex items-center gap-1 text-accent-rose">
                   <FiAlertCircle size={10} /> unavailable

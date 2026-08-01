@@ -1,0 +1,116 @@
+// Everything personal lives here, so editing your story never means touching component code.
+
+export const RELATIONSHIP_START = "2025-12-04T23:50:00";
+
+export const nicknames = [
+  "My Love",
+  "Momma",
+  "My Constellation",
+  "Beautiful Girl",
+  "Pretty Girl",
+  "Sunshine",
+  "My Favorite Human",
+  "Angel",
+  "Gorgeous",
+  "Sweetheart",
+  "My Violent Rat",
+];
+
+export const timeline = [
+  {
+    id: "before-us",
+    title: "Before Us",
+    date: "Somewhere before December",
+    text: "Somewhere in the middle of ordinary life, doing nothing special, you appeared. I did not know yet how much that would change.",
+  },
+  {
+    id: "the-number",
+    title: "The Number",
+    date: "Three days of asking",
+    text: "I asked Festus for your number for three days straight. He finally gave in. I am still convinced that was the best favor anyone has ever done me. I texted you not really knowing what to expect. Less than a month later, we were us.",
+  },
+  {
+    id: "official",
+    title: "Becoming Official",
+    date: "December 4, 2025, 11:50 PM",
+    text: "Officially, it was December 4th, 11:50 PM. We both know someone insists it was the 5th. I have stopped arguing. We celebrate both now, and honestly, I think that just means we get two anniversaries a year instead of one.",
+  },
+  {
+    id: "kilimanjaro",
+    title: "First Date, Kilimanjaro",
+    date: "Our first date",
+    text: "You barely looked at me the entire night. I do not think you realized how adorable that was, or how loud my heart was being about it under the table.",
+  },
+  {
+    id: "pleasure-park",
+    title: "Pleasure Park",
+    date: "An ordinary walk",
+    text: "We walked past a newly married couple and I said it out loud, that it was a sign. You laughed and told me it did not mean anything. I promised myself quietly that when we get married, I would remind you of that day. Consider this me, keeping a very long-term promise.",
+  },
+  {
+    id: "cinema",
+    title: "The Cinema",
+    date: "The one I still think about",
+    text: "When it was time to leave, you held onto me and cried. I did not expect it, and I have not forgotten it since. That is the moment I understood how much I meant to you, and it is the moment that means the most to me.",
+  },
+];
+
+export const reasons = [
+  "I love your smile.",
+  "I love how you light up every room.",
+  "I love your cheerful personality.",
+  "I love your sweet voice.",
+  "I love how caring you are.",
+  "I love how you always support me.",
+  "I love that you're willing to grow with me.",
+  "I love listening to you yap.",
+  "I love how playful you are.",
+  "I love your dramatic moments.",
+  "I love your beautiful eyes.",
+  "I love your height.",
+  "I love your tummy.",
+  "I love how you've never made me feel unloved.",
+  "I love the effort you put into us.",
+  "I love how safe you make me feel.",
+  "I love that you're becoming my home.",
+];
+
+export const starMessages = [
+  "You make ordinary days magical.",
+  "My favorite place is beside you.",
+  "I hope you always smile like this.",
+  "You are home.",
+  "The universe did something right.",
+  "I'd choose you again.",
+  "There are billions of stars. You're still my favorite one.",
+  "You'll always be my favorite notification.",
+];
+
+export const loveLetter = {
+  paragraphs: [
+    "Mitchelle, you are the brightest constellation in my sky. I know that sounds like something out of a movie, but I have tried to find a smaller way to say it and I cannot, because nothing else fits.",
+    "I still remember the three days I spent bothering Festus for your number. I was not usually that person. I do not chase things I am unsure of. But something about you made the waiting feel worth it before I had even said a word to you.",
+    "You changed my life. Not in some dramatic, sudden way, but slowly, in the way mornings change from dark to light. I did not notice it happening until I looked up one day and realized how different everything felt with you in it.",
+    "I still remember that day at the cinema. You held onto me like you did not want the night to end, and honestly, neither did I. I think that was the moment I stopped being careful with my heart around you.",
+    "When you smiled at me for the first time without being shy about it, something in me settled. Like my whole chest exhaled.",
+    "You are my safest place. Not because everything with you is easy, it is not always, but because even on the hard days, you are still the person I want to come home to.",
+  ],
+  closing:
+    "And if you ever forget how deeply you are loved, come back here. I'll be waiting.",
+  signature: "Onyinyechi",
+};
+
+export const promises = [
+  "Always make you happy.",
+  "Never give up on you.",
+  "Always make you feel loved.",
+];
+
+export const galleryPlaceholders = [
+  { file: "photo1.jpg", caption: "Kilimanjaro, the night you wouldn't look at me." },
+  { file: "photo2.jpg", caption: "Pleasure Park, right before I made my prediction." },
+  { file: "photo3.jpg", caption: "One of my favorite ordinary days." },
+  { file: "photo4.jpg", caption: "You, mid laugh, my favorite version of you." },
+  { file: "photo5.jpg", caption: "Us, somewhere in between everything else." },
+  { file: "photo6.jpg", caption: "A day I never wanted to end." },
+];

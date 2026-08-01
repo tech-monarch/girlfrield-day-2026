@@ -68,23 +68,6 @@ export default function MusicPlayer() {
       transition={{ duration: 0.7 }}
       className="fixed top-4 right-4 sm:top-6 sm:right-6 left-4 sm:left-auto z-40"
     >
-      <AnimatePresence>
-        {!hasStarted && (
-          <motion.div
-            initial={{ opacity: 0, y: -6 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -6 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="pill rounded-2xl px-3 py-2 mb-2 flex items-center gap-2 shadow-subtle animate-bob origin-top"
-          >
-            <span className="text-sm">🎧</span>
-            <p className="text-[11px] leading-snug text-plum">
-              Pick a song before you start scrolling, it sets the mood.
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       <div className="pill rounded-card px-4 py-3 w-full sm:w-80 shadow-subtle">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-2xl flex-shrink-0 bg-accent-pink/10 border border-accent-pink/20 flex items-center justify-center text-accent-rose overflow-hidden">
@@ -248,6 +231,24 @@ export default function MusicPlayer() {
           )}
         </AnimatePresence>
       </div>
+      
+      <AnimatePresence>
+        {!hasStarted && (
+          <motion.div
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="pill rounded-2xl px-3 py-2 mb-2 flex items-center gap-2 shadow-subtle animate-bob origin-top"
+          >
+            <span className="text-sm">🎧</span>
+            <p className="text-[11px] leading-snug text-plum">
+              Big Head, Pick a song before you start scrolling🌚.
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
     </motion.div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Atmosphere from "../components/Atmosphere.jsx";
+import SmartImage from "../components/SmartImage.jsx";
 import { galleryPlaceholders } from "../data/content.js";
 
 export default function Gallery() {
@@ -22,7 +23,7 @@ export default function Gallery() {
         <div className="space-y-24 sm:space-y-32">
           {galleryPlaceholders.map((photo, i) => (
             <motion.button
-              key={photo.file}
+              key={photo.name}
               initial={{ opacity: 0, y: 30, rotate: i % 2 === 0 ? -1.5 : 1.5 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -31,11 +32,11 @@ export default function Gallery() {
               className="block w-full text-left group"
             >
               <div className="rounded-card overflow-hidden bg-white border-4 border-white shadow-soft aspect-[4/3] sm:aspect-[16/10]">
-                <img
-                  src={`/images/${photo.file}`}
+                <SmartImage
+                  folder="/images"
+                  name={photo.name}
                   alt={photo.caption}
                   className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-cinematic"
-                  onError={(e) => (e.currentTarget.style.opacity = 0)}
                 />
               </div>
               <div className="flex items-center gap-3 mt-6">
@@ -67,11 +68,11 @@ export default function Gallery() {
               className="max-w-2xl w-full"
             >
               <div className="rounded-card overflow-hidden border-4 border-white shadow-soft aspect-[4/3]">
-                <img
-                  src={`/images/${active.file}`}
+                <SmartImage
+                  folder="/images"
+                  name={active.name}
                   alt={active.caption}
                   className="w-full h-full object-cover"
-                  onError={(e) => (e.currentTarget.style.opacity = 0)}
                 />
               </div>
               <p className="text-cream/90 mt-6 text-center font-medium">{active.caption}</p>

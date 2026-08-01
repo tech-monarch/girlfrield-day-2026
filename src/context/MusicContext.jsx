@@ -4,10 +4,10 @@ const MusicContext = createContext(null);
 
 // Add or reorder tracks here, the player detects the playlist automatically.
 export const PLAYLIST = [
-  { id: "perfect", title: "Perfect", artist: "Ed Sheeran", file: "/music/perfect.mp3", art: "/images/album-perfect.jpg" },
-  { id: "photograph", title: "Photograph", artist: "Ed Sheeran", file: "/music/photograph.mp3", art: "/images/album-photograph.jpg" },
-  { id: "lost-stars", title: "Lost Stars", artist: "Adam Levine", file: "/music/lost-stars.mp3", art: "/images/album-lost-stars.jpg" },
-  { id: "shivers", title: "Shivers", artist: "Ed Sheeran", file: "/music/shivers.mp3", art: "/images/album-shivers.jpg" },
+  { id: "perfect", title: "Perfect", artist: "Ed Sheeran", file: "/music/perfect.mp3", artName: "album-perfect" },
+  { id: "photograph", title: "Photograph", artist: "Ed Sheeran", file: "/music/photograph.mp3", artName: "album-photograph" },
+  { id: "lost-stars", title: "Lost Stars", artist: "Adam Levine", file: "/music/lost-stars.mp3", artName: "album-lost-stars" },
+  { id: "shivers", title: "Shivers", artist: "Ed Sheeran", file: "/music/shivers.mp3", artName: "album-shivers" },
 ];
 
 // "off" -> play through once and stop looping the queue

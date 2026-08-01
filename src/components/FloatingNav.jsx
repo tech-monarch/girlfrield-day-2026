@@ -33,14 +33,16 @@ export default function FloatingNav({ active, onNavigate }) {
               {isActive && (
                 <motion.span
                   layoutId="nav-pill"
-                  className="absolute inset-0 rounded-full bg-accent-pink/20 border border-accent-pink/30"
+                  className="absolute inset-0 rounded-full bg-accent-pink/20 border border-accent-pink/30 shadow-glow"
                   transition={{ duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
                 />
               )}
               <Icon
                 size={15}
-                className={`relative z-10 transition-colors ${
-                  isActive ? "text-accent-rose" : "text-mauve"
+                className={`relative z-10 transition-all duration-300 ${
+                  isActive
+                    ? "text-accent-rose drop-shadow-[0_0_6px_rgba(176,61,110,0.65)]"
+                    : "text-mauve"
                 }`}
               />
               <span

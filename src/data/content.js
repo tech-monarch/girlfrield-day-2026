@@ -107,10 +107,10 @@ export const promises = [
 ];
 
 export const galleryPlaceholders = [
-  { file: "photo1.jpg", caption: "Kilimanjaro, the night you wouldn't look at me." },
-  { file: "photo2.jpg", caption: "Pleasure Park, right before I made my prediction." },
-  { file: "photo3.jpg", caption: "One of my favorite ordinary days." },
-  { file: "photo4.jpg", caption: "You, mid laugh, my favorite version of you." },
-  { file: "photo5.jpg", caption: "Us, somewhere in between everything else." },
-  { file: "photo6.jpg", caption: "A day I never wanted to end." },
+  { name: "photo1", caption: "Kilimanjaro, the night you wouldn't look at me." },
+  { name: "photo2", caption: "Pleasure Park, right before I made my prediction." },
+  { name: "photo3", caption: "One of my favorite ordinary days." },
+  { name: "photo4", caption: "Youuuuuuu." },
+  { name: "photo5", caption: "Us, somewhere in between everything else." },
+  // { name: "photo6", caption: "A day I never wanted to end." },
 ];

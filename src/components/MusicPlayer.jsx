@@ -13,6 +13,7 @@ import {
   FiAlertCircle,
 } from "react-icons/fi";
 import { useMusic } from "../context/MusicContext.jsx";
+import SmartImage from "./SmartImage.jsx";
 
 function useResetOnChange(value, setter) {
   const prev = React.useRef(value);
@@ -68,12 +69,13 @@ export default function MusicPlayer() {
       <div className="pill rounded-card px-4 py-3 w-full sm:w-80 shadow-subtle">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-2xl flex-shrink-0 bg-accent-pink/10 border border-accent-pink/20 flex items-center justify-center text-accent-rose overflow-hidden">
-            {track.art && !artFailed ? (
-              <img
-                src={track.art}
+            {track.artName && !artFailed ? (
+              <SmartImage
+                folder="/images"
+                name={track.artName}
                 alt=""
                 className="w-full h-full object-cover"
-                onError={() => setArtFailed(true)}
+                onAllFailed={() => setArtFailed(true)}
               />
             ) : (
               <FiMusic size={15} />

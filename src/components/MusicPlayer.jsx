@@ -68,6 +68,23 @@ export default function MusicPlayer() {
       transition={{ duration: 0.7 }}
       className="fixed top-4 right-4 sm:top-6 sm:right-6 left-4 sm:left-auto z-40"
     >
+      <AnimatePresence>
+        {!hasStarted && (
+          <motion.div
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="pill rounded-2xl px-3 py-2 mb-2 flex items-center gap-2 shadow-subtle animate-bob origin-top"
+          >
+            <span className="text-sm">🎧</span>
+            <p className="text-[11px] leading-snug text-plum">
+              Pick a song before you start scrolling, it sets the mood.
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="pill rounded-card px-4 py-3 w-full sm:w-80 shadow-subtle">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-2xl flex-shrink-0 bg-accent-pink/10 border border-accent-pink/20 flex items-center justify-center text-accent-rose overflow-hidden">
@@ -86,7 +103,7 @@ export default function MusicPlayer() {
           <div className="min-w-0 flex-1">
             <p className="text-[13px] font-semibold truncate text-plum">{track.title}</p>
             <p className="text-[11px] text-mauve truncate flex items-center gap-1.5">
-              {hasStarted ? track.artist : "Tap to play our songs"}
+              {hasStarted ? track.artist : "Play this before you scroll ↴"}
               {trackError === track.id && (
                 <span className="inline-flex items-center gap-1 text-accent-rose">
                   <FiAlertCircle size={10} /> unavailable
@@ -94,13 +111,23 @@ export default function MusicPlayer() {
               )}
             </p>
           </div>
-          <button
-            onClick={toggle}
-            aria-label={isPlaying ? "Pause" : "Play"}
-            className="w-8 h-8 rounded-full bg-gradient-to-br from-accent-pink to-accent-rose flex items-center justify-center flex-shrink-0 active:scale-95 transition-transform text-white shadow-glow"
-          >
-            {isPlaying ? <FiPause size={13} /> : <FiPlay size={13} className="ml-0.5" />}
-          </button>
+          <div className="relative flex-shrink-0">
+            {!hasStarted && (
+              <motion.span
+                aria-hidden="true"
+                className="absolute inset-0 rounded-full bg-accent-rose/50"
+                animate={{ scale: [1, 1.6, 1], opacity: [0.6, 0, 0.6] }}
+                transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+              />
+            )}
+            <button
+              onClick={toggle}
+              aria-label={isPlaying ? "Pause" : "Play"}
+              className="relative w-8 h-8 rounded-full bg-gradient-to-br from-accent-pink to-accent-rose flex items-center justify-center flex-shrink-0 active:scale-95 transition-transform text-white shadow-glow"
+            >
+              {isPlaying ? <FiPause size={13} /> : <FiPlay size={13} className="ml-0.5" />}
+            </button>
+          </div>
           <button
             onClick={() => setExpanded((e) => !e)}
             aria-label="Toggle player details"

@@ -21,37 +21,37 @@ export const timeline = [
     id: "before-us",
     title: "Before Us",
     date: "Somewhere before December",
-    text: "Somewhere in the middle of ordinary life, doing nothing special, you appeared. I did not know yet how much that would change.",
+    text: "Somewhere in the middle of ordinary life, on a day that felt like every other day before it, you appeared, unannounced and completely unremarkable at first glance. There was no music swelling in the background, no sign telling me to pay attention. Just a version of my life going on as usual, and you quietly stepping into the edges of it. I did not know yet how much that would change. I did not know that I was looking at the person who would rearrange the order of everything I thought mattered. Looking back now, I wish I could go back and tell that version of me to pay closer attention, to notice you a little sooner, because he had no idea what was coming.",
   },
   {
     id: "the-number",
     title: "The Number",
     date: "Three days of asking🌚",
-    text: "I asked Festus for your number for three days straight😂. He finally gave in. I am still convinced that was the best favor anyone has ever done me. I texted you not really knowing what to expect. Less than a month later, we were us.",
+    text: "I asked Festus for your number for three days straight😂, and honestly, I am not even sure why I was that persistent about it, except that some part of me already knew I would regret it if I let the opportunity pass. He finally gave in, probably more to get me to stop asking than out of any real conviction, but I am still convinced that was the best favor anyone has ever done me. I texted you not really knowing what to expect, typing and deleting the first message more times than I will ever admit, hoping I sounded normal and not like someone who had been thinking about this moment for three whole days. Less than a month later, somehow, without either of us fully planning it, we were us. What started as a slightly embarrassing amount of persistence turned into the beginning of everything.",
   },
   {
     id: "official",
     title: "Becoming Official",
     date: "December 4, 2025, 11:50 PM",
-    text: "Officially, it was December 4th, 11:50 PM. We both know someone insists it was the 5th🌚😂. Well, I have stopped arguing. We celebrate both now, and honestly, I think that just means we get two anniversaries a year instead of one💕.",
+    text: "Officially, it was December 4th, 11:50 PM, ten minutes before the day even had the decency to end properly. We both know someone insists it was the 5th🌚😂, and I still remember the back and forth about it, both of us convinced our own version of the timeline was the correct one. Well, I have stopped arguing, mostly because I realized there is no version of this story where I lose. We celebrate both now, and honestly, I think that just means we get two anniversaries a year instead of one💕, which feels like a fitting compromise for two people who apparently cannot agree on the time but agreed, without hesitation, on each other.",
   },
   {
     id: "kilimanjaro",
     title: "First Date, Kilimanjaro",
     date: "Our first date",
-    text: "You barely looked at me the entire afternoon🌚💕. I do not think you realized how adorable that was, or how loud my heart was being about it under the table🥲.",
+    text: "You barely looked at me the entire afternoon🌚💕, eyes down, half smiling at something on the table, anywhere but directly at me, and I remember trying so hard to seem calm about it while internally spiraling. I do not think you realized how adorable that was, or how loud my heart was being about it under the table🥲, doing absolutely nothing to help me act normal. I kept thinking of things to say just so the silence would not stretch too long, and somewhere between the nervous laughter and the two of us tiptoeing around how we actually felt, I remember thinking that I did not want the afternoon to end. That nervous, quiet version of us at Kilimanjaro is still one of my favorite memories, precisely because neither of us was trying to perform anything. We were just two people, painfully aware of each other, pretending not to be.",
   },
   {
     id: "pleasure-park",
     title: "Pleasure Park",
     date: "An ordinary walk",
-    text: "We walked past a newly married couple and I said it out loud, that it was a sign. You laughed and told me it did not mean anything. I promised myself quietly that when we get married, I would remind you of that day. Consider this me, keeping a very long-term promise🥲💕.",
+    text: "We walked past a newly married couple and I said it out loud, that it was a sign, half joking but only half. You laughed and told me it did not mean anything, waving it off the way you do when you think I am being dramatic, but I noticed you did not let go of my hand the entire time you were laughing at me. I promised myself quietly that when we get married, I would remind you of that day, of the sign you dismissed and the walk you probably do not even remember as clearly as I do. Consider this me, keeping a very long-term promise🥲💕, because some things you say jokingly on an ordinary walk end up meaning more than either of you expected at the time.",
   },
   {
     id: "cinema",
     title: "The Cinema",
     date: "The one I still think about",
-    text: "When it was time to leave, you held onto me and cried. I did not expect it, and I have not forgotten it since. That is the moment I understood how much I meant to you, and it is the moment that means the most to me.",
+    text: "When it was time to leave, you held onto me and cried, and for a moment I genuinely did not know what to do, because nothing about the evening had prepared me for that. I did not expect it, and I have not forgotten it since, the way you held on like leaving the moment behind was harder than either of us wanted to admit. I remember standing there, holding you, not saying much, because it felt like anything I said would be smaller than what was actually happening between us. That is the moment I understood how much I meant to you, more clearly than any words could have shown me, and it is the moment that means the most to me, out of every memory we have made since.",
   },
 ];
 

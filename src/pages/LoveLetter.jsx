@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Atmosphere from "../components/Atmosphere.jsx";
+import Reveal from "../components/Reveal.jsx";
 import { loveLetter } from "../data/content.js";
 
 export default function LoveLetter() {
@@ -19,12 +20,12 @@ export default function LoveLetter() {
               exit={{ opacity: 0 }}
               className="text-center"
             >
-              <p className="text-[12px] tracking-widest2 uppercase text-accent-rose font-semibold mb-4">
+              <Reveal as="p" className="text-[12px] tracking-widest2 uppercase text-accent-rose font-semibold mb-4">
                 Chapter Five
-              </p>
-              <h2 className="font-display text-4xl sm:text-5xl mb-16 text-plum">
+              </Reveal>
+              <Reveal as="h2" delay={0.1} className="font-display text-4xl sm:text-5xl mb-16 text-plum">
                 My Letter To You
-              </h2>
+              </Reveal>
               <motion.button
                 whileTap={{ scale: 0.96 }}
                 whileHover={{ y: -4 }}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Atmosphere from "../components/Atmosphere.jsx";
+import Reveal from "../components/Reveal.jsx";
 import { RELATIONSHIP_START } from "../data/content.js";
 
 function getDiff() {
@@ -67,12 +68,12 @@ export default function Timer() {
     <section className="relative min-h-screen px-6 py-32 flex flex-col items-center justify-center text-center overflow-hidden bg-cream">
       <Atmosphere glow="center" stars />
       <div className="relative z-10 max-w-2xl">
-        <p className="text-[12px] tracking-widest2 uppercase text-accent-rose font-semibold mb-4">
+        <Reveal as="p" className="text-[12px] tracking-widest2 uppercase text-accent-rose font-semibold mb-4">
           Chapter Four
-        </p>
-        <h2 className="font-display text-3xl sm:text-5xl text-plum mb-16 text-balance">
+        </Reveal>
+        <Reveal as="h2" delay={0.1} className="font-display text-3xl sm:text-5xl text-plum mb-16 text-balance">
           Look how far we've come 🥹
-        </h2>
+        </Reveal>
 
         <div className="surface flex flex-wrap justify-center divide-x divide-accent-pink/15 px-4 py-8 sm:px-8 shadow-subtle">
           {units.map(([label, value]) => (

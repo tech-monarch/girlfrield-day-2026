@@ -26,26 +26,26 @@ export const timeline = [
   {
     id: "the-number",
     title: "The Number",
-    date: "Three days of asking",
-    text: "I asked Festus for your number for three days straight. He finally gave in. I am still convinced that was the best favor anyone has ever done me. I texted you not really knowing what to expect. Less than a month later, we were us.",
+    date: "Three days of asking🌚",
+    text: "I asked Festus for your number for three days straight😂. He finally gave in. I am still convinced that was the best favor anyone has ever done me. I texted you not really knowing what to expect. Less than a month later, we were us.",
   },
   {
     id: "official",
     title: "Becoming Official",
     date: "December 4, 2025, 11:50 PM",
-    text: "Officially, it was December 4th, 11:50 PM. We both know someone insists it was the 5th. I have stopped arguing. We celebrate both now, and honestly, I think that just means we get two anniversaries a year instead of one.",
+    text: "Officially, it was December 4th, 11:50 PM. We both know someone insists it was the 5th🌚😂. Well, I have stopped arguing. We celebrate both now, and honestly, I think that just means we get two anniversaries a year instead of one💕.",
   },
   {
     id: "kilimanjaro",
     title: "First Date, Kilimanjaro",
     date: "Our first date",
-    text: "You barely looked at me the entire night. I do not think you realized how adorable that was, or how loud my heart was being about it under the table.",
+    text: "You barely looked at me the entire afternoon🌚💕. I do not think you realized how adorable that was, or how loud my heart was being about it under the table🥲.",
   },
   {
     id: "pleasure-park",
     title: "Pleasure Park",
     date: "An ordinary walk",
-    text: "We walked past a newly married couple and I said it out loud, that it was a sign. You laughed and told me it did not mean anything. I promised myself quietly that when we get married, I would remind you of that day. Consider this me, keeping a very long-term promise.",
+    text: "We walked past a newly married couple and I said it out loud, that it was a sign. You laughed and told me it did not mean anything. I promised myself quietly that when we get married, I would remind you of that day. Consider this me, keeping a very long-term promise🥲💕.",
   },
   {
     id: "cinema",
@@ -83,6 +83,7 @@ export const starMessages = [
   "The universe did something right.",
   "I'd choose you again.",
   "There are billions of stars. You're still my favorite one.",
+  "Youre my Sky full of Stars.",
   "You'll always be my favorite notification.",
 ];
 
@@ -94,6 +95,7 @@ export const loveLetter = {
     "I still remember that day at the cinema. You held onto me like you did not want the night to end, and honestly, neither did I. I think that was the moment I stopped being careful with my heart around you.",
     "When you smiled at me for the first time without being shy about it, something in me settled. Like my whole chest exhaled.",
     "You are my safest place. Not because everything with you is easy, it is not always, but because even on the hard days, you are still the person I want to come home to.",
+    "I should perharps with you happy August 1st day, as my girlfriend, NO, My Wife, you should be celebrated every day💕.",
   ],
   closing:
     "And if you ever forget how deeply you are loved, come back here. I'll be waiting.",
@@ -128,34 +130,34 @@ export const promises = [
 // immediately. Swap in your own labels whenever you're ready, nothing else
 // needs to change.
 export const galleryItems = [
-  { type: "photo", name: "photo1", caption: "Kilimanjaro, the night you wouldn't look at me." },
+  { type: "photo", name: "photo1", caption: "I couldnt stop admiring how little your hand was in mine😂💕." },
   {
     type: "video",
     name: "video1",
     poster: null,
-    caption: "Kilimanjaro again, this time with sound. Replace this with the clip you actually want here.",
+    caption: "Remember PPK🌚.",
   },
-  { type: "photo", name: "photo2", caption: "Pleasure Park, right before I made my prediction." },
+  { type: "photo", name: "photo2", caption: "I remember how happy i wsa this evening and how much i didnt want you to go🥲." },
   {
     type: "video",
     name: "video2",
     poster: null,
-    caption: "A few seconds of Pleasure Park, just so I can hear us laughing again whenever I want.",
+    caption: "Hehehehe🌚.",
   },
-  { type: "photo", name: "photo3", caption: "One of my favorite ordinary days." },
+  { type: "photo", name: "photo3", caption: "Im sure you didnt know when i took this pic." },
   { type: "photo", name: "photo4", caption: "Youuuuuuu." },
   {
     type: "video",
     name: "video3",
     poster: null,
-    caption: "The cinema, in motion this time. This one's yours to swap for whatever you'd rather I keep.",
+    caption: "I wanted to kiss the breath out of your lungs🥲",
   },
   { type: "photo", name: "photo5", caption: "Us, somewhere in between everything else." },
   {
     type: "video",
     name: "video4",
     poster: null,
-    caption: "One more memory that moves. Rename this slot or add a fifth, however many you want in here.",
+    caption: "It wsa from this video i fell in love with your beautiful smile🥹💕.",
   },
   // { type: "photo", name: "photo6", caption: "A day I never wanted to end." },
 ];

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Atmosphere from "../components/Atmosphere.jsx";
+import Reveal from "../components/Reveal.jsx";
 
 const HEART_TYPES = [
   { icon: "💗", points: 10 },
@@ -64,11 +65,15 @@ export default function HeartCatchGame() {
     <section className="relative min-h-screen px-6 py-32 flex flex-col items-center overflow-hidden bg-cream">
       <Atmosphere glow="center" stars />
       <div className="relative z-10 w-full max-w-md text-center">
-        <p className="text-[12px] tracking-widest2 uppercase text-accent-rose font-semibold mb-4">
+        <Reveal as="p" className="text-[12px] tracking-widest2 uppercase text-accent-rose font-semibold mb-4">
           Just For Fun 🎀
-        </p>
-        <h2 className="font-display text-4xl sm:text-5xl mb-3 text-plum">Heart Catch</h2>
-        <p className="text-mauve mb-10">Tap the hearts before they float away.</p>
+        </Reveal>
+        <Reveal as="h2" delay={0.1} className="font-display text-4xl sm:text-5xl mb-3 text-plum">
+          Heart Catch
+        </Reveal>
+        <Reveal as="p" delay={0.2} className="text-mauve mb-10">
+          Tap the hearts before they float away.
+        </Reveal>
 
         {status === "playing" && (
           <div className="flex justify-between text-sm font-semibold text-mauve mb-3 px-1">

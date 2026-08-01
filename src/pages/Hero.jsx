@@ -27,9 +27,9 @@ export default function Hero({ onBegin }) {
           transition={{ delay: 0.7, duration: 1.1, ease: [0.34, 1.56, 0.64, 1] }}
           className="font-display text-[13vw] sm:text-7xl leading-[1.05] text-plum text-balance"
         >
-          Mitchelle
-          <br />
-          <span className="font-script text-accent-rose text-[16vw] sm:text-8xl">Isioma</span>
+          My Violent
+          {/* <br /> */}
+          <span className="font-script text-accent-rose text-[16vw] sm:text-8xl">Rat</span>
         </motion.h1>
 
         <motion.p
@@ -38,7 +38,7 @@ export default function Hero({ onBegin }) {
           transition={{ delay: 1.3, duration: 0.9 }}
           className="text-mauve mt-8 max-w-md"
         >
-          Happy Girlfriend's Day 💐 This isn't a website. It's every little
+          Happy Girlfriend's Day babyy💐.<br /> This is every little
           piece of my heart, arranged so you can walk through it.
         </motion.p>
 
@@ -46,8 +46,8 @@ export default function Hero({ onBegin }) {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.9, duration: 0.9 }}
-          whileTap={{ scale: 0.96 }}
-          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.96, transition: { type: "spring", stiffness: 400, damping: 17 } }}
+          whileHover={{ scale: 1.04, y: -2, transition: { type: "spring", stiffness: 300, damping: 15 } }}
           onClick={() => {
             if (!hasStarted) play();
             onBegin();

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { MusicProvider } from "./context/MusicContext.jsx";
 import MusicPlayer from "./components/MusicPlayer.jsx";
 import FloatingNav from "./components/FloatingNav.jsx";
+import ScrollProgress from "./components/ScrollProgress.jsx";
 import LoadingSequence from "./components/LoadingSequence.jsx";
 import PasswordGate from "./components/PasswordGate.jsx";
 import Hero from "./pages/Hero.jsx";
@@ -49,6 +50,7 @@ export default function App() {
 
       {phase === "unlocked" && (
         <>
+          <ScrollProgress />
           <MusicPlayer />
           <FloatingNav active={active} onNavigate={scrollTo} />
 

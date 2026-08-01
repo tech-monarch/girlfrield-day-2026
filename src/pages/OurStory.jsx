@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Atmosphere from "../components/Atmosphere.jsx";
+import Reveal from "../components/Reveal.jsx";
 import { timeline } from "../data/content.js";
 
 // Chapter One. A single connected path instead of a gimmick, one continuous
@@ -14,16 +15,16 @@ export default function OurStory() {
       <Atmosphere glow="top" />
 
       <div className="relative z-10 max-w-3xl mx-auto">
-        <p className="text-[12px] tracking-widest2 uppercase text-accent-rose font-semibold mb-4 text-center">
+        <Reveal as="p" className="text-[12px] tracking-widest2 uppercase text-accent-rose font-semibold mb-4 text-center">
           Chapter One
-        </p>
-        <h2 className="font-display text-4xl sm:text-6xl text-center mb-6 text-plum text-balance">
+        </Reveal>
+        <Reveal as="h2" delay={0.1} className="font-display text-4xl sm:text-6xl text-center mb-6 text-plum text-balance">
           Our Beginning
-        </h2>
-        <p className="text-center text-mauve max-w-md mx-auto mb-28">
+        </Reveal>
+        <Reveal as="p" delay={0.2} className="text-center text-mauve max-w-md mx-auto mb-28">
           Every love story starts somewhere ordinary. Here is the path that
           quietly led from there to us.
-        </p>
+        </Reveal>
 
         <div className="relative">
           <div

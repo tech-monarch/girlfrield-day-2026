@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Atmosphere from "../components/Atmosphere.jsx";
+import Reveal from "../components/Reveal.jsx";
 
 export default function Certificate() {
   const canvasRef = useRef(null);
@@ -119,10 +120,12 @@ export default function Certificate() {
     <section className="relative min-h-screen px-6 py-32 flex flex-col items-center overflow-hidden bg-cream">
       <Atmosphere glow="top" />
       <div className="relative z-10 w-full max-w-lg text-center">
-        <p className="text-[12px] tracking-widest2 uppercase text-accent-rose font-semibold mb-4">
+        <Reveal as="p" className="text-[12px] tracking-widest2 uppercase text-accent-rose font-semibold mb-4">
           Chapter Six
-        </p>
-        <h2 className="font-display text-4xl sm:text-5xl mb-14 text-plum">Our Promise 📜</h2>
+        </Reveal>
+        <Reveal as="h2" delay={0.1} className="font-display text-4xl sm:text-5xl mb-14 text-plum">
+          Our Promise 📜
+        </Reveal>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

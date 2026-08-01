@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Atmosphere from "../components/Atmosphere.jsx";
+import Reveal from "../components/Reveal.jsx";
 import SmartImage from "../components/SmartImage.jsx";
 import SmartVideo from "../components/SmartVideo.jsx";
 import { galleryItems } from "../data/content.js";
@@ -13,15 +14,15 @@ export default function Gallery() {
       <Atmosphere glow="top" />
 
       <div className="relative z-10 max-w-3xl mx-auto">
-        <p className="text-[12px] tracking-widest2 uppercase text-accent-rose font-semibold mb-4 text-center">
+        <Reveal as="p" className="text-[12px] tracking-widest2 uppercase text-accent-rose font-semibold mb-4 text-center">
           Chapter Two
-        </p>
-        <h2 className="font-display text-4xl sm:text-6xl text-center mb-4 text-plum text-balance">
+        </Reveal>
+        <Reveal as="h2" delay={0.1} className="font-display text-4xl sm:text-6xl text-center mb-4 text-plum text-balance">
           Moments I'll Never Forget
-        </h2>
-        <p className="text-center text-mauve mb-28">
+        </Reveal>
+        <Reveal as="p" delay={0.2} className="text-center text-mauve mb-28">
           Tap a photograph to step back into it, the clips play as you scroll, sound off until you tap the speaker. 📸
-        </p>
+        </Reveal>
 
         <div className="space-y-24 sm:space-y-32">
           {galleryItems.map((item, i) => {
